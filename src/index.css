@@ -1,0 +1,86 @@
+@import-normalize; /* bring in normalize.css styles */
+
+body {
+  margin: 0;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul::-webkit-scrollbar {
+  width: 20px;               /* width of the entire scrollbar */
+}
+
+ul::-webkit-scrollbar-track {
+  background: rgb(214, 210, 206);        /* color of the tracking area */
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: rgb(28, 92, 243);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(19, 152, 126);  /* creates padding around scroll thumb */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap:20px;
+  margin-top: 60px;
+}
+
+h2, h5 {
+  margin: 20px;
+  padding: 0;
+}
+label {
+  display: flex;
+  align-items: center;
+}
+input {
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 24px;
+  padding-left: 10px;
+}
+button {
+  width:100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(28, 92, 243);
+  color: aliceblue;
+  padding: 5px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+button[type="submit"]{
+  width: 170px;
+  height: 60px;
+  margin: auto;
+  font-size: 26px;
+}
+
+ul {
+  height: 470px;
+  overflow-y: scroll;
+  width: 600px;
+}
+.list_section {
+  height: 470px;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 24px;
+}
