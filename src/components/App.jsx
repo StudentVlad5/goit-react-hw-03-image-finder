@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 export default class App extends Component {
 state = {
       imgSearchName: '',
-      loading: false
      }
 
 handleFormSubmit = (searchName) => {
@@ -38,7 +37,6 @@ this.setState({imgSearchName:searchName})
 }}
 
 App.propTypes = {
-  imgSearchName :  PropTypes.string,
-  loading: PropTypes.bool
+  imgSearchName :  PropTypes.string
   }
   

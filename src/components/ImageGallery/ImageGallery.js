@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import ImageGalleryError from './ImageGalleryError';
 import ImageGalleryPending from './ImageGalleryPending';
@@ -22,7 +23,7 @@ class ImageGallery extends Component {
 async componentDidUpdate(prevProps, prevState){
 if(prevProps.imgSearchName !== this.props.imgSearchName)
 {   this.setState({status:'pending'});
-    fetch(`https://pixabay.com/api/?q=${this.props.imgSearchName}&page=1&key=29531534-c6f4c4079f81828b6fd250707&image_type=photo&orientation=horizontal&per_page=12`)
+    await fetch(`https://pixabay.com/api/?q=${this.props.imgSearchName}&page=1&key=29531534-c6f4c4079f81828b6fd250707&image_type=photo&orientation=horizontal&per_page=12`)
     .then(res=>{if(res.ok){return res.json()}
     return Promise.reject(new Error(`Can't find anything with ${this.props.imgSearchName}`))})
     .then(images => 
@@ -43,7 +44,6 @@ if(prevState.imageCount !== this.state.imageCount){
     .then(images => {
     this.setState({images: this.state.images.concat(images.hits), status:'resolved', statusMore: 'idle'})})
     .catch(error=>this.setState({error, status:'reject'}))
-    
 }
 
 if (this.state.scroll){
