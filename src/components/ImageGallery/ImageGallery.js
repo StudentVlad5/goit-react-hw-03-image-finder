@@ -1,6 +1,5 @@
 import {Component} from 'react';
 import PropTypes from 'prop-types';
-import { toast } from 'react-toastify';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import ImageGalleryError from './ImageGalleryError';
 import ImageGalleryPending from './ImageGalleryPending';
