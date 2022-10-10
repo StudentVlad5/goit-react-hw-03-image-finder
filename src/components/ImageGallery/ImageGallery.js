@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import PropTypes from 'prop-types';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import ImageGalleryError from './ImageGalleryError';
 import ImageGalleryPending from './ImageGalleryPending';
@@ -115,3 +116,16 @@ handleKeyDown = (e) => {
 
 }}
 export default ImageGallery
+
+
+
+ImageGallery.propTypes = {
+    images : PropTypes.string,
+    error : PropTypes.string,
+    imageCount : PropTypes.number,
+    status : PropTypes.string,
+    totalImg : PropTypes.string, 
+    statusMore : PropTypes.string,
+    visibility : PropTypes.bool,
+    scroll : PropTypes.bool,
+}

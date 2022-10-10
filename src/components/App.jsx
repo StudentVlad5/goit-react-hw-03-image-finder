@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import PropTypes from 'prop-types';
 import { ToastContainer } from 'react-toastify';
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
@@ -36,3 +37,8 @@ this.setState({imgSearchName:searchName})
   );
 }}
 
+App.propTypes = {
+  imgSearchName :  PropTypes.string,
+  loading: PropTypes.bool
+  }
+  

@@ -1,4 +1,5 @@
 import {Component} from "react";
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import {FaSearchengin} from "react-icons/fa";
 
@@ -44,3 +45,7 @@ render(){ return (
 </header>)
 }}
 export default Searchbar
+
+Searchbar.propTypes = {
+searchName :  PropTypes.string
+}
