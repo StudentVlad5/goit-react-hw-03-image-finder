@@ -60,6 +60,12 @@ img {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
+.SearchMessage {
+  text-align: center;
+  font-size: 24px;
+  color: darkblue;
+  font-weight: 400;
+}
 
 /*
  * Стили компонента SearchForm
@@ -176,16 +182,28 @@ img {
 }
 
 .Modal {
-  max-width: calc(100vw - 48px);
-  max-height: calc(100vh - 24px);
+  display: block;
+  position: relative;
+  align-items: right;
+  min-width: calc(100vw - 248px);
+  min-height: calc(100vh - 248px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-
+.button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
 /*
 * Стили компонента Buton (Load more)
 */
 .Button {
   padding: 8px 16px;
-  border-radius: 2px;
+  width: 200px;
+  height: 48px;
+  border-radius: 5px;
   background-color: #3f51b5;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
@@ -199,7 +217,10 @@ img {
   line-height: 24px;
   font-style: normal;
   font-weight: 500;
-  min-width: 180px;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
@@ -209,3 +230,28 @@ img {
   background-color: #303f9f;
 }
 
+.Loader-button-container{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+ /* Стили компонента  (Pending) */
+ .PendingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+ }
+
+ .icon-spinner {
+  margin-left: 20px;
+  fill: #3f51b5;;
+  animation: moving 2s infinite linear;
+ }
+
+  @keyframes moving {
+    0% {transform: rotate(0deg)};
+    100% {transform: rotate(359deg)};
+  }
