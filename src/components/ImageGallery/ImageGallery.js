@@ -85,7 +85,7 @@ handleKeyDown = (e) => {
 
     render() {
         let imgForSearch = this.state.images;
-        const {status, error, statusMore, visibility} = this.state;
+        const {status, error, statusMore, visibility,totalImg} = this.state;
         const handleImageCount = this.handleImageCount;
         const countOfImg = this.checkCountImg();
         const startModalWindow = this.startModalWindow;
@@ -100,6 +100,7 @@ handleKeyDown = (e) => {
 
         if(status === 'resolved'){ return (
         <div>
+            {totalImg === 0 && <h1>Упс, не знайшли такі фото. Спробуйте змінити дані пошуку</h1>}
             <ul className="ImageGallery">
             <ImageGalleryItem liItem={imgForSearch} startModalWindow={startModalWindow}/>
             </ul>
