@@ -1,5 +1,6 @@
 import {createPortal} from 'react-dom';
 import {FaRegWindowClose} from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 const modalRoot = document.querySelector('#modal-root');
 const  Modal = ({largeImage, closeModalWindow, handleKeyDown}) => { 
@@ -12,3 +13,9 @@ const  Modal = ({largeImage, closeModalWindow, handleKeyDown}) => {
  )       
 }
 export default Modal
+
+Modal.propTypes = {
+   largeImage : PropTypes.object,
+   closeModalWindow :  PropTypes.func,
+   handleKeyDown : PropTypes.func
+  }
